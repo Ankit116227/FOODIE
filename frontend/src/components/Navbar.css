@@ -1,0 +1,204 @@
+/* Main Navbar */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-container {
+  max-width: 1350px;
+  min-height: 76px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* Logo */
+
+.navbar-logo {
+  color: #556b2f;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.navbar-logo:hover {
+  color: #3e4e22;
+}
+
+/* Navigation Links */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.navbar-links a {
+  position: relative;
+  padding: 8px 0;
+  color: #555555;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #556b2f;
+}
+
+.navbar-links a.active {
+  color: #556b2f;
+  font-weight: 800;
+}
+
+.navbar-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #556b2f;
+}
+
+/* Logout Button */
+
+.navbar-logout {
+  padding: 10px 17px;
+  border: 1px solid #556b2f;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #556b2f;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navbar-logout:hover {
+  background: #556b2f;
+  color: #ffffff;
+}
+
+/* Cart Button */
+
+.cart-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 23px;
+  border: 1px solid #556b2f;
+  border-radius: 9px;
+  background: #556b2f;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cart-button:hover {
+  background: #3e4e22;
+  transform: translateY(-1px);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .navbar-container {
+    padding: 0 20px;
+    gap: 16px;
+  }
+
+  .navbar-logo {
+    font-size: 25px;
+  }
+
+  .navbar-links {
+    gap: 17px;
+  }
+
+  .navbar-links a {
+    font-size: 13px;
+  }
+
+  .navbar-logout {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .cart-button {
+    padding: 10px 15px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .navbar-container {
+    min-height: auto;
+    padding: 13px 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .navbar-logo {
+    font-size: 24px;
+  }
+
+  .cart-button {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  .navbar-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+  }
+
+  .navbar-links a {
+    font-size: 13px;
+  }
+
+  .navbar-logout {
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar-links {
+    gap: 10px 15px;
+  }
+
+  .navbar-links a {
+    font-size: 12px;
+  }
+
+  .navbar-logo {
+    font-size: 21px;
+  }
+}
